@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        cursor: none;
+        background-color: #040C26
+      }
+      .div {
+        height: 400px;
+        width: 766px;
+        border-radius: 18px;
+        border: 2px solid #fff;
+        overflow: auto;
+        resize: both;
+      }
+      .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(200, 83, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #040C26">
+    <div class="custom-cursor"></div>
+    <div class="div"></div>
+    <script>
+      // JavaScript to move the curƒsor
+      document.addEventListener("mousemove", function (e) {
+        var cursor = document.querySelector(".custom-cursor");
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+    </script>
+  </body>
+</html>
